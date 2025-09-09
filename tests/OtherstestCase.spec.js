@@ -1,5 +1,6 @@
 
 import { test, expect } from '@playwright/test';
+import { constants } from 'buffer';
 
 test('CheckActionBox', async ({ page }) => {
 
@@ -58,8 +59,12 @@ test('HoverAction', async ({ page }) => {
 
 await page.goto("https://playwright.dev/");
 await page.waitForTimeout(3000);
-await page.hover("//a[@class='getStarted_Sjon']", "Test text");
+await page.hover("//a[@class='getStarted_Sjon']");
 await page.waitForTimeout(3000);
+const test = "Tanjila";
+console.log(test)
+
+
 
 });
 
